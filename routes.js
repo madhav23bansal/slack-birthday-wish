@@ -14,7 +14,7 @@ routes.post('/wish', (req, res) => {
 
     let response = {
         "response_type": "in_channel",
-        "text": "To " + req.body.text + "\n" + wish + "\nBest,\n" + "<@" + req.body.user_id + ">"
+        "text": "To " + req.body.text + "\n" + wish + "\nBest,\n" + "<@" + req.body.user_name + ">"
     }
     res.json(response);
 })
