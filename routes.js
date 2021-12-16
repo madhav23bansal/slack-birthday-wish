@@ -1,4 +1,5 @@
 const routes = require('express').Router();
+const { getRandomWish } = require('./utils/wishes');
 // const axios = require("axios");
 // const fs = require("fs");
 
@@ -9,9 +10,11 @@ routes.get('/', (req, res) => {
 
 routes.post('/wish', (req, res) => {
 
+    let wish = getRandomWish();
+
     let response = {
         "response_type": "in_channel",
-        "text": req.body.user_name + " " + req.body.text
+        "text": + "To " + req.body.text + "\n" + wish + "\nBest " + "<@" + req.body.user_id + ">"
     }
     res.json(response);
 })
