@@ -8,10 +8,11 @@ routes.get('/', (req, res) => {
 });
 
 routes.post('/wish', (req, res) => {
-    let data = {
-        'name': 'Madhav'
+    let response = {
+        "response_type": "in_channel",
+        "text": "It is working fine"
     }
-    res.json(data);
+    res.json(response);
 })
 
 module.exports = routes;
