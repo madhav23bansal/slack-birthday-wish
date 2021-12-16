@@ -8,9 +8,10 @@ routes.get('/', (req, res) => {
 });
 
 routes.post('/wish', (req, res) => {
+
     let response = {
         "response_type": "in_channel",
-        "text": "It is working fine"
+        "text": req.body.user_name + " " + req.body.text
     }
     res.json(response);
 })
