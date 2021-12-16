@@ -6,7 +6,7 @@ const routes = require('./routes');
 
 // Initialize express and define a port
 const app = express()
-const PORT = 3000
+const PORT = 80
 
 app.use(bodyParser.json())
 
