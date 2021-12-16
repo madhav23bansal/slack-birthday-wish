@@ -7,4 +7,11 @@ routes.get('/', (req, res) => {
     res.status(200).send('Working');
 });
 
+routes.post('/wish', (req, res) => {
+    let data = {
+        'name': 'Madhav'
+    }
+    res.json(data);
+})
+
 module.exports = routes;
